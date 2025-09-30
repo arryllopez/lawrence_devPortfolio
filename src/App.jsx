@@ -1,4 +1,5 @@
 import React from 'react' 
+import './index.css' //importing the css file so that tailwind can work
 
 const App = () => {
   return (
