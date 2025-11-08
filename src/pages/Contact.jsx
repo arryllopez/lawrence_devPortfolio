@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
 
@@ -19,7 +21,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    //emailjs package installation 1:44:04
+    //emailjs package installation 
+    emailjs.sendForm(
+      //create emailjs account
+    )
   };
 
   
