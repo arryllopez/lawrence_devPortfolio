@@ -1,9 +1,8 @@
-import React, { Suspense } from 'react'
-import { useState } from 'react'
-import { useRef } from 'react'
+import { Suspense, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 import Fox from '../models/Fox.jsx'
-import { Loader } from '@react-three/drei';
+import Loader from '../components/Loader.jsx'
+import { Canvas } from '@react-three/fiber';
 
 
 
@@ -143,9 +142,10 @@ const Contact = () => {
           </Suspense>
         </Canvas>  
       </div> 
+       
 
     </section> 
-  )
-}
+  );
+};
 
 export default Contact
