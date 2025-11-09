@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser';
+import Fox from '../models/Fox.jsx'
+import { Loader } from '@react-three/drei';
+
 
 
 const Contact = () => {
@@ -22,15 +25,37 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     //emailjs package installation 
-    emailjs.sendForm(
+    emailjs.send(
       //create emailjs account
-    )
-  };
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name : form.name, 
+        to_name :"Lawrence", 
+        from_email : form.email,
+        to_email: "arryllopez7@gmail.com",
+        message : form.message, 
+
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    ).then(() => {
+      setIsLoading(false);     
+      // show success message
+      // hide an alert 
+      //temp success message
+      alert("Thank you. I will get back to you as soon as possible.");
+      setForm({name: '', email: '', message: ''});
+  }).catch((error) => {
+      setIsLoading(false);
+      console.log(error);
+      alert("Something went wrong. Please try again.");
+    });
+  }
 
   
   return (
-    <section 
-    className = "relative flex lg:flex-row flex-col max-container"
+    <section
+      className="relative flex lg:flex-row flex-col max-container"
     > 
       <div className = "flex-1 min-w-[50%] flex flex-col"> 
         <h1 className = "head-text "> Get in Touch </h1>
@@ -101,6 +126,22 @@ const Contact = () => {
            
           </button>
         </form> 
+      </div> 
+
+      <div className = "lg-w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]"> 
+        <Canvas
+          camera = {{ 
+            position :[0,0,5]
+          }}
+        > 
+          <Suspense fallback = {<Loader/>}>
+            <Fox
+            position  = {[0.5,0.35,0]}
+            rotation = {[12,0,0]}
+            scale = {[0.5,0.5,0.5]} 
+            /> 
+          </Suspense>
+        </Canvas>  
       </div> 
 
     </section> 
