@@ -9,8 +9,8 @@ const RabbitWrapper = ({ currentAnimation }) => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         // 📱 mobile
-        setRabbitPosition([0, 0.35, 0])
-        setRabbitScale([0.35, 0.35, 0.35])
+        setRabbitPosition([0.15, 0.225, 0])
+        setRabbitScale([0.45, 0.45, 0.45])
       } else {
         // 🖥 desktop
         setRabbitPosition([0.5, -0.5, 0])
@@ -27,7 +27,7 @@ const RabbitWrapper = ({ currentAnimation }) => {
     <Rabbit
       currentAnimation={currentAnimation}
       position={rabbitPosition}
-      rotation={[12.6, -0.6, 0]}
+      rotation={[12.6, -0.7, 0]}
       scale={rabbitScale}
     />
   )
