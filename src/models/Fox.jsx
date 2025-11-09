@@ -18,7 +18,7 @@ const Fox = ({currentAnimation, ...props}) =>{
   const { actions } = useAnimations(animations, group)
 
   useEffect(()=> {
-
+    //use animations for fox
   },[actions, currentAnimation])
  
     
