@@ -1,6 +1,9 @@
 import React from 'react'
 import { skills } from '../constants'
 import CTA from '../components/CTA'
+import { Chrono } from 'react-chrono'
+//import Timeline from '../components/Timeline'
+import Work from './Work'
 
 const About = () => {
   return (
@@ -44,7 +47,19 @@ const About = () => {
           </p>
         </div>
       </div> 
+
+      <div className = "py-16">
+
+        <Work />
+      </div>
+
+
+    
         
+
+
+
+
         <hr className='border-slate-700' />
         <CTA />
 
