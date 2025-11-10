@@ -4,12 +4,16 @@ import Rabbit from '../models/Rabbit.jsx'; // 🐇 replaced Fox
 import Loader from '../components/Loader.jsx';
 import { Canvas } from '@react-three/fiber';
 import RabbitWrapper from '../components/RabbitWrapper.jsx';
+import useAlert from '../hooks/useAlert.js';
+import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState('Armature.001|Idle');
+
+  const {alert, showAlert, hideAlert} = useAlert();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -36,19 +40,25 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
-      alert("Thank you. I will get back to you as soon as possible.");
-      setForm({ name: '', email: '', message: '' });
-      setCurrentAnimation('Armature.001|Idle');
+      showAlert({ show :true, text: 'Thank you. I will get back to you as soon as possible.', type: 'success'});
+
+      setTimeout(()=> { 
+        hideAlert();
+        setCurrentAnimation('Armature.001|Idle');
+        setForm({ name: '', email: '', message: '' });
+      }, [3000])
+     
     }).catch((error) => {
       setIsLoading(false);
       setCurrentAnimation('Armature.001|Idle');
       console.error(error);
-      alert("Something went wrong. Please try again.");
+      showAlert({ show :true, text: 'Something went wrong. Please try again.', type: 'danger'});
     });
   };
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
+      {alert.show && <Alert {...alert} />}
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 

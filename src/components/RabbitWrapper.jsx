@@ -13,8 +13,8 @@ const RabbitWrapper = ({ currentAnimation }) => {
         setRabbitScale([0.45, 0.45, 0.45])
       } else {
         // 🖥 desktop
-        setRabbitPosition([0.5, -0.5, 0])
-        setRabbitScale([0.5, 0.5, 0.5])
+        setRabbitPosition([0.5, -0.8, 0])
+        setRabbitScale([0.625, 0.625, 0.625])
       }
     }
 
