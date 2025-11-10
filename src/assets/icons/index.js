@@ -26,10 +26,33 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import flask from './flask.svg'
+import fastapi from './FastApi.svg'
+import pytorch from './PyTorch.svg'
+import huggingface from './hf-logo.svg' 
+import mysql from './MySQL.svg'
+import docker from './Docker.svg'
+import aws from './AWS.svg' 
+import python from './Python.svg'
+import java from './Java.svg'
+import spring from './Spring.svg'
+import cplusplus from './C++ (CPlusPlus).svg'
+import kaggle from './Kaggle.svg'
 
 export {
     css,
+    aws,
+    kaggle,
+    docker,
+    spring,
+    python,
+    java,
+    huggingface,
+    mysql,
+    cplusplus,
+    pytorch,
     express,
+    fastapi,
     git,
     github,
     html,
@@ -42,6 +65,7 @@ export {
     react,
     redux,
     sass,
+    flask,
     tailwindcss,
     typescript,
     linkedin,
