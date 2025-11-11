@@ -227,46 +227,51 @@ export const socialLinks = [
 ];
 
 export const projects = [
-    {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+  {
+    id: 1,
+    // iconUrl: nurseGPTIcon,
+    // theme: 'btn-back-blue',
+    name: "NurseGPT - Interactive Symptom Classifier",
+    duration: "October 2025 - Present",
+    technologies: ["Python", "FastAPI", "React", "Three.js"],
+    description: `
+Designing an AI-driven healthcare platform that enables users to interact with a 3D human body model to mark symptoms and receive real-time diagnostic predictions.
+Fine-tuning a ClinicalBERT-based model on a structured disease–symptom dataset (4K records) to classify conditions with improved contextual accuracy.
+Built a data preprocessing pipeline that reduces noise and inconsistency by 25%, improving model training stability and label reliability.
+Developing a FastAPI backend to serve low-latency inference responses and a React + Three.js frontend for intuitive, anatomy-based symptom input.
+Targeting a 15–20% boost in prediction accuracy through iterative model optimization and real-world testing.
+    `,
+  },
+  {
+    id: 2,
+    // iconUrl: studyTokIcon,
+    // theme: 'btn-back-green',
+    name: "StudyTok (Ontario Tech - HackHive 2025)",
+    duration: "February 2025",
+    technologies: ["React", "Python", "TailwindCSS", "Flask"],
+    description: `
+Developed an AI-based flashcard app for HackHive 2025 to promote active recall through custom and AI-generated Q&A flashcards.
+Designed the frontend using Next.js, React, and Tailwind CSS to create a responsive and sleek user interface.
+Developed a Flask backend to record and transcribe user-spoken answers using Google Cloud Speech-to-Text API, achieving 97% transcription accuracy.
+Applied fuzzy string matching to grade responses with high precision and integrated Google Gemini 2.0 API to dynamically generate Q&A flashcards.
+Enhanced personalized learning experiences through adaptive question generation and feedback loops.
+    `,
+  },
+  {
+    id: 3,
+    // iconUrl: dateNetIcon,
+    // theme: 'btn-back-pink',
+    name: "DateNet",
+    duration: "November 2024 - December 2024",
+    technologies: ["HTML5", "CSS", "JavaScript", "Node.js", "Bcrypt"],
+    description: `
+Developed a full-stack dating web application for a final project enabling users to create profiles and match based on shared interests and study programs.
+Designed a modern, user-friendly interface with HTML, CSS, and JavaScript to deliver a sleek and engaging user experience.
+Leveraged a secure Node.js backend using Sequelize ORM, JWT authentication, Bcrypt password hashing, and CORS for frontend-backend communication.
+Earned a top grade of 95%, reflecting strong technical skills and successful project delivery.
+    `,
+  },
 ];
+
+
+

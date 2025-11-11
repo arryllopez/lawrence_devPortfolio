@@ -1,47 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { FaBriefcase, FaCalendarAlt, FaBuilding } from "react-icons/fa";
 
 const ExperienceTimeline = () => {
   const experiences = [
     {
       id: 1,
-      company: "Tech Solutions Inc.",
-      logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623",
-      position: "Senior Software Engineer",
-      duration: "2021 - Present",
+      company: "STEM Camp",
+      position: "Summer Camp Counsellor (Seasonal Role)",
+      duration: "June 2024 - Present",
       achievements: [
-        "Led development of cloud-native applications",
-        "Improved system performance by 40%",
-        "Mentored junior developers",
+        "Facilitated interactive workshops on fundamental STEM concepts for diverse learners, fostering engagement and curiosity in science and technology.",
+        "Delivered lessons on Scratch, MakeCode, and Edison robot programming, helping students create games and robotics projects that build computational thinking.",
       ],
-      skills: ["React", "Node.js", "AWS"],
+      skills: ["STEM Education", "Scratch", "MakeCode", "Edison Robotics", "Leadership"],
     },
     {
       id: 2,
-      company: "Digital Innovations Lab",
-      logo: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
-      position: "Full Stack Developer",
-      duration: "2019 - 2021",
+      company: "BGC Durham",
+      position: "After-School Program Activity Leader",
+      duration: "September 2024 - Present",
       achievements: [
-        "Developed enterprise-level applications",
-        "Reduced loading time by 60%",
-        "Implemented CI/CD pipeline",
+        "Oversaw the safety of young children while maintaining a positive, inclusive learning environment.",
+        "Implemented interactive teaching strategies to sustain engagement and excitement during classroom activities.",
+        "Collaborated with a large team of activity leaders to coordinate and manage daily schedules effectively.",
       ],
-      skills: ["JavaScript", "Python", "Docker"],
-    },
-    {
-      id: 3,
-      company: "StartUp Ventures",
-      logo: "https://images.unsplash.com/photo-1497366216548-37526070297c",
-      position: "Frontend Developer",
-      duration: "2017 - 2019",
-      achievements: [
-        "Built responsive web applications",
-        "Increased user engagement by 45%",
-        "Optimized frontend performance",
-      ],
-      skills: ["HTML", "CSS", "JavaScript"],
+      skills: ["Team Collaboration", "Child Supervision", "Classroom Engagement", "Communication"],
     },
   ];
 
@@ -56,9 +39,7 @@ const ExperienceTimeline = () => {
 
         <div className="relative">
           {/* Hide the timeline line on mobile */}
-          <div
-            className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-500"
-          />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-500" />
 
           {experiences.map((experience, index) => (
             <TimelineCard
@@ -112,37 +93,19 @@ const TimelineCard = ({ experience, index, timelineColor }) => {
         index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
       } items-center mb-16`}
     >
-      {/* Card section */}
       <div className="md:w-1/2 px-4 mb-8 md:mb-0">
         <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-transparent">
-          <div className="flex items-center mb-4">
-            <img
-              src={experience.logo}
-              alt={experience.company}
-              className="w-12 h-12 rounded-full object-cover"
-              loading="lazy"
-            />
-            <div className="ml-4">
-              <h3 className="text-xl font-semibold text-gray-900">
-                {experience.position}
-              </h3>
-              <div className="flex items-center text-gray-600">
-                <FaBuilding className="mr-2 text-blue-500" />
-                <span>{experience.company}</span>
-              </div>
-              <div className="flex items-center text-gray-500">
-                <FaCalendarAlt className="mr-2 text-blue-400" />
-                <span>{experience.duration}</span>
-              </div>
-            </div>
-          </div>
+          <h3 className="text-xl font-semibold text-gray-900">
+            {experience.position}
+          </h3>
+          <p className="text-gray-600">{experience.company}</p>
+          <p className="text-gray-500 mb-4">{experience.duration}</p>
 
           <div className="space-y-2">
             {experience.achievements.map((achievement, i) => (
-              <div key={i} className="flex items-start">
-                <FaBriefcase className="mt-1 mr-2 text-blue-500 flex-shrink-0" />
-                <p className="text-gray-700">{achievement}</p>
-              </div>
+              <p key={i} className="text-gray-700">
+                • {achievement}
+              </p>
             ))}
           </div>
 
