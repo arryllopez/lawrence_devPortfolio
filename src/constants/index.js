@@ -4,6 +4,7 @@ import {
     contact,
     css,
     kaggle,
+    hackhive,
     estate,
     express,
     git,
@@ -11,6 +12,7 @@ import {
     html,
     javascript,
     linkedin,
+    nurseLogo,
     mongodb,
     motion,
     mui,
@@ -36,6 +38,7 @@ import {
     java,
     spring,
     cplusplus,
+    datenetlogo, 
 } from "../assets/icons";
 
 export const skills = [
@@ -229,8 +232,8 @@ export const socialLinks = [
 export const projects = [
   {
     id: 1,
-    // iconUrl: nurseGPTIcon,
-    // theme: 'btn-back-blue',
+    iconUrl: nurseLogo,
+    theme: 'btn-back-blue',
     name: "NurseGPT - Interactive Symptom Classifier",
     duration: "October 2025 - Present",
     technologies: ["Python", "FastAPI", "React", "Three.js"],
@@ -241,11 +244,12 @@ Built a data preprocessing pipeline that reduces noise and inconsistency by 25%,
 Developing a FastAPI backend to serve low-latency inference responses and a React + Three.js frontend for intuitive, anatomy-based symptom input.
 Targeting a 15–20% boost in prediction accuracy through iterative model optimization and real-world testing.
     `,
+    link : 'https://github.com/arryllopez/NurseGPT',
   },
   {
     id: 2,
-    // iconUrl: studyTokIcon,
-    // theme: 'btn-back-green',
+    iconUrl: hackhive,
+    theme: 'btn-back-yellow',
     name: "StudyTok (Ontario Tech - HackHive 2025)",
     duration: "February 2025",
     technologies: ["React", "Python", "TailwindCSS", "Flask"],
@@ -256,11 +260,12 @@ Developed a Flask backend to record and transcribe user-spoken answers using Goo
 Applied fuzzy string matching to grade responses with high precision and integrated Google Gemini 2.0 API to dynamically generate Q&A flashcards.
 Enhanced personalized learning experiences through adaptive question generation and feedback loops.
     `,
+    link : 'https://github.com/arryllopez/StudyTok',
   },
   {
     id: 3,
-    // iconUrl: dateNetIcon,
-    // theme: 'btn-back-pink',
+    iconUrl: datenetlogo,
+    theme: 'btn-back-pink',
     name: "DateNet",
     duration: "November 2024 - December 2024",
     technologies: ["HTML5", "CSS", "JavaScript", "Node.js", "Bcrypt"],
@@ -270,6 +275,7 @@ Designed a modern, user-friendly interface with HTML, CSS, and JavaScript to del
 Leveraged a secure Node.js backend using Sequelize ORM, JWT authentication, Bcrypt password hashing, and CORS for frontend-backend communication.
 Earned a top grade of 95%, reflecting strong technical skills and successful project delivery.
     `,
+    link : 'https://github.com/arryllopez/DateNet',
   },
 ];
 

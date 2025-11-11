@@ -38,9 +38,14 @@ import java from './Java.svg'
 import spring from './Spring.svg'
 import cplusplus from './C++ (CPlusPlus).svg'
 import kaggle from './Kaggle.svg'
-
+import datenetlogo from './datenet logo.svg'
+import hackhive from './hackhive.svg'
+import nurseLogo from  './nurseLogo.svg'
 export {
     css,
+    nurseLogo,
+    datenetlogo,
+    hackhive,
     aws,
     kaggle,
     docker,
