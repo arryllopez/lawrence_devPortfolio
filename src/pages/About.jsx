@@ -3,7 +3,8 @@ import { skills } from '../constants'
 import CTA from '../components/CTA'
 import { Chrono } from 'react-chrono'
 //import Timeline from '../components/Timeline'
-import Work from './Work'
+import ExperienceTimeline from '../components/ExperienceTimeline'
+
 
 const About = () => {
   return (
@@ -39,7 +40,7 @@ const About = () => {
       </div>
 
       <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience.</h3>
+        <h3 className='subhead-text'>Work Experience</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
             I've worked with all sorts of companies, leveling up my skills and
@@ -48,10 +49,12 @@ const About = () => {
         </div>
       </div> 
 
-      <div className = "py-16">
 
-        <Work />
-      </div>
+        <div className>
+        <ExperienceTimeline />
+        </div>
+
+
 
 
     
