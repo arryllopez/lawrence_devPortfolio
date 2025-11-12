@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  assetsInclude : ['**/*.gltf', '**/*.glb', '**/*.hdr' ],
   base : '/lawrence_devPortfolio/',
+  assetsInclude : ['**/*.gltf', '**/*.glb', '**/*.hdr' ],
 })
